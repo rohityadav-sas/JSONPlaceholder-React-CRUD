@@ -38,7 +38,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) application that in
 2. Navigate to the project directory:
 
     ```sh
-    cd jsonplaceholder-react-crud
+    cd JSONPlaceholder-React-CRUD
     ```
 
 2. Install dependencies
