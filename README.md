@@ -32,7 +32,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) application that in
 1. Clone the repo:
 
    ```sh
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/rohityadav-sas/JSONPlaceholder-React-CRUD.git
     ```
 
 2. Navigate to the project directory:
