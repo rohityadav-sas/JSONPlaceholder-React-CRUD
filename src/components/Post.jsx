@@ -1,17 +1,26 @@
 import Button from "./Button";
 import deletePost from "../api/deletePost";
 import { Crud } from "../context/CrudProvider";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
+
 
 export default function Post({ id, titles, body }) {
-    let { posts, setPosts, title, setTitle, setBody, editMode, setEditMode, setPostToEdit, titleRef } = useContext(Crud);
+    let { posts, setPosts,
+        setTitle,
+        setBody,
+        setEditMode,
+        setPostToEdit,
+        titleRef,
+        setScrollMode
+    } = useContext(Crud);
 
     async function removePost(id) {
         setPosts(posts.filter(post => post.id !== id));
         await deletePost(id);
     }
 
-    async function editPost(id) {
+    async function editPostButton(id) {
+        setScrollMode(true);
         posts.map(post => {
             if (post.id === id) {
                 setTitle(post.title);
@@ -35,7 +44,7 @@ export default function Post({ id, titles, body }) {
             <p className="text-justify"><span className="font-bold text-lg text-warning">Body:</span> {body}</p>
             <span className="text-2xl text-center font-bold text-warning">{id}</span>
             <div className="flex gap-4 opacity-0 absolute top-full left-1/2 -translate-x-1/2 group-hover:opacity-100 group-hover:-translate-y-1/2 transition-all duration-500 ">
-                <Button color="bg-success" value="EDIT" onClick={() => editPost(id)} />
+                <Button color="bg-success" value="EDIT" onClick={() => editPostButton(id)} />
                 <Button color="bg-error" value="DELETE" onClick={() => removePost(id)} />
             </div>
         </div>

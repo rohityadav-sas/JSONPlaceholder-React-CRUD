@@ -9,6 +9,7 @@ export const CrudProvider = ({ children }) => {
     let [body, setBody] = useState("");
     let [editMode, setEditMode] = useState(false);
     let [postToEdit, setPostToEdit] = useState(null);
+    let [scrollMode, setScrollMode] = useState(false);
 
     let titleRef = useRef(null);
     let bodyRef = useRef(null);
@@ -21,7 +22,8 @@ export const CrudProvider = ({ children }) => {
             body, setBody,
             editMode, setEditMode,
             postToEdit, setPostToEdit,
-            titleRef, bodyRef
+            titleRef, bodyRef,
+            scrollMode, setScrollMode
         }}>
             {children}
         </Crud.Provider>

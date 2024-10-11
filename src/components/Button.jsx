@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+
 export default function LoadingButton({ color, value, onClick }) {
     let [isLoading, setIsLoading] = useState(false);
     let handleClick = (e) => {
@@ -16,7 +16,7 @@ export default function LoadingButton({ color, value, onClick }) {
             {isLoading ? (
                 <div role="status" className="inline-block ml-2 h-3 w-3 mr-2 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
             ) : (
-                <div className='ml-1'>{value}</div>
+                <div>{value}</div>
             )}
         </button>
     );
