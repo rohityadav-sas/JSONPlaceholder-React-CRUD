@@ -23,11 +23,11 @@ This project is a simple CRUD (Create, Read, Update, Delete) application that in
 - Delete posts
 - Fetch posts from JSONPlaceholder API
 
-### Prerequisites
+## Prerequisites
 - Node.js
 - Bun
 
-### Installation
+## Installation
 
 1. Clone the repo:
 
